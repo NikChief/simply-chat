@@ -1,101 +1,162 @@
 * {
-padding: 0;
-margin: 0;
-border: 0;
-font-family: 'Didact Gothic', sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'Didact Gothic', sans-serif;
 }
-*, *:before, *:after {
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-:focus, :active{outline: none;
+
+:focus,
+:active {
+  outline: none;
 }
-a:focus, a:active{outline: none;
+
+a:focus,
+a:active {
+  outline: none;
 }
-nav, footer, aside{display: block;
+
+nav,
+footer,
+aside {
+  display: block;
 }
-html, body {
-height: 100%;
-width: 100%;
-font-size: 100%;
-line-height: 1;
-font-size: 14px;
--ms-text-size-adjust: 100%;
--moz-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
-input, button, textarea {
-font-family: inherit;
+
+input,
+button,
+textarea {
+  font-family: inherit;
 }
-input::-ms-clear{display: none;
+
+input::-ms-clear {
+  display: none;
 }
-button{cursor: pointer;
+
+button {
+  cursor: pointer;
 }
-button::-moz-focus-inner {padding: 0;border: 0;
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
 }
-a, a:visited{text-decoration: none;
+
+a,
+a:visited {
+  text-decoration: none;
 }
-a:hover{text-decoration: none;
+
+a:hover {
+  text-decoration: none;
 }
-ul li{list-style: none;
+
+ul li {
+  list-style: none;
 }
-img{vertical-align: top;
+
+img {
+  vertical-align: top;
 }
-h1, h2, h3, h4, h5, h6 { font-size: inherit;   font-weight: 400;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
 }
 
 .chat {
-  padding-bottom: 70px;
+  padding-bottom: 80px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .form {
+  width: 100%;
+  margin: 0 auto;
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
   background: rgba(0, 0, 0, .3);
   padding: 10px;
   display: flex;
   height: 80px;
-  align-items: center; 
+  align-items: center;
 }
 
 .username {
-  height: 35px;
+  height: 44px;
   background: beige;
   padding: 15px;
-  border-radius: 30px;
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #222;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 300;
 }
 
 .input {
-  height: 35px;
-  border-radius: 30px;
+  height: 44px;
+  border-radius: 25px;
   border: none;
   margin: 5px;
   padding: 0 25px;
   display: flex;
   width: 100%;
   outline: none;
+  font-size: 22px;
+}
+
+.input:focus {
+  /* border: 1px solid rgb(104, 88, 88); */
+  box-shadow: 1px 1px 8px rgb(104, 88, 88);
 }
 
 .button {
-  background: #222;
+  background: rgb(56, 55, 55);
   border: none;
-  width: 100px;
-  height: 35px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   color: wheat;
-  border-radius: 5px;
+  border-radius: 16px;
+  font-size: 16px;
+  padding-right: 12px;
+  padding-left: 12px;
+  font-size: 24px;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 8px rgb(56, 55, 55);
+}
+
+.button:active {
+  background: rgb(48, 47, 47);
 }
 
 .messages {
@@ -105,12 +166,31 @@ h1, h2, h3, h4, h5, h6 { font-size: inherit;   font-weight: 400;
 
 .message {
   padding: 10px;
+  font-size: 22px;
 }
 
-.message > span {
+.message>span {
   font-weight: 600;
 }
 
 .message:nth-child(odd) {
   background: #efefef;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .message,
+  .button,
+  .input,
+  .username {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .message,
+  .button,
+  .input,
+  .username {
+    font-size: 16px;
+  }
 }
